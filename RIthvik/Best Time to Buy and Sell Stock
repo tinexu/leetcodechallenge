@@ -3,6 +3,7 @@ class Solution(object):
         """
         :type prices: List[int]
         :rtype: int
+        # beats 59.75% in runtime and 47.05% in memory usage, runtime is O(n) and memory use is O(1)
         """
         maxProfit = 0
         i = 0
