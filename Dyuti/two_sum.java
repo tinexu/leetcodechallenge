@@ -5,7 +5,8 @@ class Solution {
         for (int i = 0; i < nums.length; i++) {
             int tracker = target - nums[i];
             if (map.containsKey(tracker)) {
-                indexes = {map.get(tracker), i}
+                indexes = {map.get(tracker), i};
+                break;
             }
             map.put(nums[i], i);
         }
