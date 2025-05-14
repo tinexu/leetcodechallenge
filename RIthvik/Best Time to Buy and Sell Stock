@@ -1,0 +1,20 @@
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        maxProfit = 0
+        i = 0
+        j = 1
+        while j < len(prices):
+            #the below line is because of the fact that if you have a later day that is cheaper than the current, then you should NOT buy at the current day
+            if prices[i] >= prices[j]:
+                i = j  
+            elif prices[j] - prices[i] > maxProfit:
+                maxProfit = prices[j] - prices[i]
+            j += 1
+        return maxProfit
+
+        
+        
