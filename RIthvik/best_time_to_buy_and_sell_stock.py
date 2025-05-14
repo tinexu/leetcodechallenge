@@ -25,3 +25,25 @@ class Solution(object):
                 maxProfit = prices[j] - prices[i]
             j += 1
         return maxProfit
+
+
+#SECOND ATTEMPT
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        maxProfit = 0
+        i = 0
+        j = 1
+        while j < len(prices):
+            if prices[i] >= prices[j]:
+                i = j
+            profit = prices[j] - prices[i]
+            maxProfit = profit if maxProfit < profit else maxProfit
+            j += 1
+        return maxProfit
+
+        
+        
