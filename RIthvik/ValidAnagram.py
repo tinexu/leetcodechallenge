@@ -9,7 +9,8 @@ class Solution(object):
             return False
         charsT = {}
         charsS = {}
-        for character in string.printable:
+        letters = "abcdefghijklmnopqrstuvwxyz"
+        for character in letters:
             charsS[character] = 0
             charsT[character] = 0
         for i in range(len(s)):
