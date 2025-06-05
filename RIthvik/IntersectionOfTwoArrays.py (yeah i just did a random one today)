@@ -1,0 +1,15 @@
+class Solution(object):
+    def intersection(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        firstSet = set(nums1)
+        secondSet = set(nums2)
+        intersections = []
+        for num in firstSet:
+            if num in secondSet:
+                intersections.append(num)
+        return intersections
+        
